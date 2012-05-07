@@ -7,7 +7,7 @@
 
 CONF_HOME=`pwd`
 CONF_BACKUP=$CONF_HOME/backup
-CONF_FILES="bashrc dircolors"
+CONF_FILES="bashrc_aliases dircolors"
 
 mkdir -pv $CONF_BACKUP
 
