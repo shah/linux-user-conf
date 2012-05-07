@@ -16,5 +16,5 @@ alias show-services-startup="chkconfig --list | grep '3:on'"
 alias show-ports-listening='sudo netstat -tulpn'
 
 # show which ports are available from outside (not firewalled)
-alias show-port-open='sudo nmap -sT -O `hostname`'
+alias show-ports-open='sudo nmap -sT -O `hostname`'
 
