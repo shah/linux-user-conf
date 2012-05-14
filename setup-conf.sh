@@ -17,3 +17,5 @@ for file in $CONF_FILES; do
     ln -sv $CONF_HOME/$file ~/.$file
 done
 
+# create directory where installs / setup should be done from
+mkdir -p $HOME/setup
