@@ -6,8 +6,8 @@ and want to use these configuration files, do the following:
 
     git clone git://github.com/shah/linux-user-conf.git $HOME/conf
 
-Then, symlink the common configurations:
+Then, symlink the common configurations by running setup-conf.sh:
 
-    cd $HOME/conf
-    ./setup-conf.sh
+    cd $HOME/conf && ./setup-conf.sh
+    
     
