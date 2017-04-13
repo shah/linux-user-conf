@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Windows Subsystem for Linux (WSL) has umask set to 0000 and I usually use
+# WSL and I don't want world RW because SSH doesnt like it
+umask 0022
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
