@@ -1,3 +1,19 @@
+Bash on Ubuntu on Windows Runbook
+=================================
+
+To remove and then re-install Bash on Ubuntu on Windows (will get the latest version):
+    
+    lxrun /uninstall /full /y
+    lxrun /install
+
+Default umask seems to be 0000 (RW for world, yuck)
+    
+    echo "umask 0022" >> /etc/profile
+
+Sudo doesn’t inherit root’s HOME. Add the following in your /etc/sudoers somewhere:
+
+    Defaults always_set_home
+
 Linux and UNIX Configuration Files
 ==================================
 
