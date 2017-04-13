@@ -8,7 +8,7 @@ To remove and then re-install Bash on Ubuntu on Windows (will get the latest ver
 
 Default umask seems to be 0000 (RW for world, yuck)
     
-    echo "umask 0022" >> /etc/profile
+    sudo echo "umask 0022" >> /etc/profile
 
 Sudo doesn’t inherit root’s HOME. Add the following in your /etc/sudoers somewhere:
 
