@@ -6,8 +6,9 @@ To remove and then re-install Bash on Ubuntu on Windows (will get the latest ver
     lxrun /uninstall /full /y
     lxrun /install
 
-Default umask seems to be 0000 (RW for world, yuck).
-Uncomment (or add if it's not there) "umask 0022" in ~/.profile
+Default umask seems to be 0000 (RW for world, yuck). Add this to /etc/profile:
+
+    umask 0022
     
 Sudo doesn’t inherit root’s HOME. Add the following in your /etc/sudoers somewhere:
 
