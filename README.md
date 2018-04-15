@@ -1,26 +1,31 @@
-Bash on Ubuntu on Windows Runbook
+Linux on Windows (Ubuntu on WSL) Runbook
 =================================
 
-To remove and then re-install Bash on Ubuntu on Windows (will get the latest version):
-    
-    lxrun /uninstall /full /y
-    lxrun /install
-   
+To remove and then re-install Ubuntu on Windows use the Windows Store distributions. After installation, run the following to see what version was installed.
+
+    uname -a
+    lsb_release -a 
+
 Sudo doesn’t inherit root’s HOME. Add the following in your /etc/sudoers somewhere:
 
+    sudo vi /etc/sudoers
     Defaults always_set_home
 
+Install zsh and set user's /bin/bash to /bin/zsh
+
+    sudo apt-get install zsh
+    sudo vi /etc/passwd
+    
 Linux and UNIX Configuration Files
 ==================================
 
-Shahid's .bashrc and other standard linux config files. When you create a new account
-and want to use these configuration files, do the following:
+Shahid uses zsh and the http://ohmyz.sh/ framework. After setting up user's $SHELL to use /bin/zsh, add this to .zshrc:
 
     umask 0022 # required if running in WSL
-    git clone git://github.com/shah/linux-user-conf.git $HOME/conf
 
-Then, symlink the common configurations by running setup-conf.sh:
+Set the theme:
 
-    cd $HOME/conf && ./setup-conf.sh
+    ZSH_THEME="bira"
+
     
     
