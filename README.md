@@ -50,6 +50,15 @@ Whatever that version is, install it and use it and verify what version you see:
     nvm ls
     node -v
 
-Now you can run nodejs.
+Now you can run Node.js, but should install yarn package management too:
 
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     
+Since we're running NVM, install jarn only (not nodejs): 
+
+    sudo apt-get install --no-install-recommends yarn
+
+Some Node.js packages and yarn require python:
+
+    sudo apt-get install python
