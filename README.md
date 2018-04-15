@@ -27,5 +27,29 @@ Set the theme:
 
     ZSH_THEME="bira"
 
+Setup Node.js using NVM on Ubuntu 16.04 LTS (do research if different version). This comes from https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+
+    sudo apt-get update
+    sudo apt-get install build-essential libssl-dev
     
+    # Install the NVM package (see https://github.com/creationix/nvm)
+    sudo vi .zshrc
+
+Add 'nvm' to the plugins variable, then exit the shell and come back in.
+Type:
+
+    nvm ls-remote
+    
+Find something that looks like this:
+
+    v8.11.1   (Latest LTS: Carbon)
+    
+Whatever that version is, install it and use it and verify what version you see:
+
+    nvm install v8.11.1
+    nvm ls
+    node -v
+
+Now you can run nodejs.
+
     
