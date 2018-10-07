@@ -14,6 +14,11 @@ fi
 sudo apt-get update
 sudo apt-get install curl ansible -y
 
+if grep -q Microsoft /proc/version; then
+  title "Running on WSL, download /etc/wsl.conf"
+  curl https://raw.githubusercontent.com/shah/linux-user-conf/master/wsl.conf > /etc/wsl.conf
+fi
+
 title "Install viasite-ansible.zsh"
 sudo ansible-galaxy install viasite-ansible.zsh --force
 
