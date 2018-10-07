@@ -1,0 +1,2 @@
+antigen bundle colored-man-pages
+antigen bundle joel-porquet/zsh-dircolors-solarized.git
