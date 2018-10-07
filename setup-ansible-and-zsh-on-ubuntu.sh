@@ -29,7 +29,7 @@ title "Download .zshrc.local to $HOME"
 curl https://raw.githubusercontent.com/shah/linux-user-conf/master/.zshrc.local > $HOME/.zshrc.local
 
 title "Download .vimrc to $HOME"
-curl https://raw.githubusercontent.com/shah/linux-user-conf/master/.vimrc > $HOME/.vimrc
+curl https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim > $HOME/.vimrc
 
 title "Download playbook to $HOME/setup/zsh.ansible-playbook.yml"
 mkdir -p $HOME/setup
