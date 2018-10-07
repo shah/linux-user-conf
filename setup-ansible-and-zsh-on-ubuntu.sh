@@ -20,6 +20,9 @@ sudo ansible-galaxy install viasite-ansible.zsh --force
 title "Download .zshrc.local to $HOME"
 curl https://raw.githubusercontent.com/shah/linux-user-conf/master/.zshrc.local > $HOME/.zshrc.local
 
+title "Download .vimrc to $HOME"
+curl https://raw.githubusercontent.com/shah/linux-user-conf/master/.vimrc > $HOME/.vimrc
+
 title "Download playbook to $HOME/setup/zsh.ansible-playbook.yml"
 mkdir -p $HOME/setup
 curl https://raw.githubusercontent.com/shah/linux-user-conf/master/zsh.ansible-playbook.yml > $HOME/setup/zsh.ansible-playbook.yml
