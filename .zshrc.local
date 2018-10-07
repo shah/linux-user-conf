@@ -1,0 +1,5 @@
+umask 0022
+setopt auto_cd
+
+export WORKSPACE=$HOME/workspace
+cdpath=($HOME $WORKSPACE)
