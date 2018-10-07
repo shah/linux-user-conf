@@ -12,11 +12,11 @@ if [ -f /etc/apt/sources.list.d/ansible-ansible-jessie.list ]; then
     sudo sed -i 's/jessie/trusty/g' /etc/apt/sources.list.d/ansible-ansible-jessie.list
 fi
 sudo apt-get update
-sudo apt-get install curl ansible -y
+sudo apt-get install curl wget ansible -y
 
 if grep -q Microsoft /proc/version; then
   title "Running on WSL, download /etc/wsl.conf"
-  sudo curl https://raw.githubusercontent.com/shah/linux-user-conf/master/wsl.conf > /etc/wsl.conf
+  sudo wget --quiet -O /etc/wsl.conf https://raw.githubusercontent.com/shah/linux-user-conf/master/wsl.conf
 fi
 
 title "Install viasite-ansible.zsh"
