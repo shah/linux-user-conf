@@ -17,6 +17,9 @@ sudo apt-get install curl wget ansible -y
 if grep -q Microsoft /proc/version; then
   title "Running on WSL, download /etc/wsl.conf"
   sudo wget --quiet -O /etc/wsl.conf https://raw.githubusercontent.com/shah/linux-user-conf/master/wsl.conf
+  
+  title "Running on WSL, setting umask to 0022"
+  umask 0022
 fi
 
 title "Install viasite-ansible.zsh"
